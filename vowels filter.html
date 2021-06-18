@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head><style>
+		h1{
+		font-family: "Zapf Chancery", cursive;
+		text-align:center;
+		font-size:75px;
+		}
+
+		h5{
+		font-family: "Zapf Chancery", cursive;
+		font-style: italic;
+		text-align:center;
+		font-size:25px;
+		}
+		
+		form{
+		
+		
+  		text-align: center;
+		
+		
+		}
+
+		body{
+		
+ 		text-align: center;
+		background-repeat: no-repeat, repeat;
+  		background-image: url("yellowalpha.jpg"), url("redalpha.jpg");
+  		background-blend-mode: lighten;
+		
+		}
+		
+		input{
+		align-content:center;
+		border-style: solid;
+  		border-color: coral;
+		
+		}
+
+	</style></head>
+		
+
+	<body>
+			
+		<h1>WELCOME!</h1>
+		<h5>Please upload the file to filter vowel words</h5>
+			
+		<form>
+				
+			<input type="file" id="file" onchange="return fileValidation()">
+			<input type="submit" value="Filter">
+		</form>
+		<script>
+			function fileValidation() {
+            			var fileInput = 
+                		document.getElementById('file');
+              
+            			var filePath = fileInput.value;
+          
+            			// Allowing file type
+            			var allowedExtensions =/(\.txt|\.docx|\.doc)$/i;
+              
+            			if (!allowedExtensions.exec(filePath)) {
+                			alert('Invalid file type! please upload a text document.');
+                			fileInput.value = '';
+                			return false;
+            			} 
+			}
+	</script>
+			
+	</body>
+
+</html>
+
+
+
+
+
+
